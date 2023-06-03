@@ -41,5 +41,5 @@ function howManyFilms() {
 
 howManyFilms();
 
-
 console.log(personalMovieDB);
+
