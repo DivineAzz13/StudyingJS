@@ -20,8 +20,8 @@ let personalMovieDB = {
 
 function rememberMyFilms() {
 	for (let i = 0; i < 2; i++) {
-		let answer1 = prompt("Один из последних просмотренных фильмов?");
-		let answer2 = prompt("На сколько оцените его?");
+		let answer1 = prompt("Один из последних просмотренных фильмов?").trim();
+		let answer2 = prompt("На сколько оцените его?").trim();
 		if (
 			answer1 !== null &&
 			answer1 !== "" &&
