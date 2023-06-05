@@ -1,4 +1,14 @@
-let numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+let numberOfFilms;
+
+function start() {
+	numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+
+	while(numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
+		numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+	}
+}
+
+start ();
 
 let personalMovieDB = {
 	count: numberOfFilms,
@@ -8,7 +18,7 @@ let personalMovieDB = {
 	privat: false,
 };
 
-function askUserAboutFilm() {
+function rememberMyFilms() {
 	for (let i = 0; i < 2; i++) {
 		let answer1 = prompt("Один из последних просмотренных фильмов?");
 		let answer2 = prompt("На сколько оцените его?");
@@ -25,9 +35,9 @@ function askUserAboutFilm() {
 		}
 	}
 }
-askUserAboutFilm();
+rememberMyFilms();
 
-function howManyFilms() {
+function detecPersonalLevel() {
   if(numberOfFilms < 10) {
     console.log("Просмотрено довольно мало фильмов");
   } else if (numberOfFilms >= 10 && numberOfFilms < 30) {
@@ -39,7 +49,7 @@ function howManyFilms() {
   }
 }
 
-howManyFilms();
+detecPersonalLevel();
 
 console.log(personalMovieDB);
 
